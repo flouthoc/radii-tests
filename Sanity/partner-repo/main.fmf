@@ -1,0 +1,11 @@
+summary: Test partner repository creation
+description: |
+  Verify that radii creates radii-nvidia-partner.repo in /etc/yum.repos.d
+  during install when the --partner-repo flag is given and subscription
+  manager is configured.  The generated file must contain the correct
+  section name, architecture-specific base URL, GPG key, and SSL
+  certificate paths extracted from redhat.repo.  In read-only mode
+  (list), the file must not be written.  Without the flag, or with
+  --skip-subscriptions, the file must not be created.  Also verifies
+  the config command for persisting partner-repos settings.
+order: 36
